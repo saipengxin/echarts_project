@@ -1,0 +1,48 @@
+/*清除元素默认的内外边距  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /*让所有斜体 不倾斜*/
+  em,
+  i {
+    font-style: normal;
+  }
+  /*去掉列表前面的小点*/
+  li {
+    list-style: none;
+  }
+  /*图片没有边框   去掉图片底侧的空白缝隙*/
+  img {
+    border: 0; /*ie6*/
+    vertical-align: middle;
+  }
+  /*让button 按钮 变成小手*/
+  button {
+    cursor: pointer;
+  }
+  /*取消链接的下划线*/
+  a {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #e33333;
+  }
+
+
+  body {
+    /* 背景缩放如果要连写，前面一定要有背景位置，然后跟 / ,再跟背景缩放。*/
+    background: url(../images/bg.jpg) no-repeat 0 0 / cover;
+    /* background-size: cover; */
+}
+
+.viewport {
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: url(../images/logo.png) no-repeat 0 0 / contain;
+    min-height: 780px;
+}
