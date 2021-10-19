@@ -58,8 +58,116 @@
   }
 
   .panel {
+    position: relative;
     border: 15px solid transparent;
     border-width: 0.6375rem 0.475rem 0.25rem 1.65rem;
     border-image-source: url(../images/border.png);
     border-image-slice: 51 38 20 132;
   }
+  .inner {
+    position: absolute;
+    top: -0.6375rem;
+    left: -1.65rem;
+    right: -0.475rem;
+    bottom: -0.25rem;
+    padding: 0.3rem 0.45rem;
+  }
+
+  /* 概览区域模块制作 */
+.overview {
+  height: 1.375rem;
+}
+.overview ul {
+  display: flex;
+  justify-content: space-between;
+}
+.overview ul li h4 {
+  font-size: 0.35rem;
+  color: #fff;
+  margin: 0 0 0.1rem 0.06rem;
+}
+.overview ul li span {
+  font-size: 0.2rem;
+  color: #4c9bfd;
+}
+
+/* 监控区域模块制作 */
+.monitor {
+  height: 6rem;
+}
+.monitor .inner {
+  padding: 0.3rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.monitor .tabs {
+  padding: 0 0.45rem;
+  margin-bottom: 0.225rem;
+  display: flex;
+}
+.monitor .tabs a {
+  color: #1950c4;
+  font-size: 0.225rem;
+  padding: 0 0.3375rem;
+}
+.monitor .tabs a:first-child {
+  padding-left: 0;
+  border-right: 0.025rem solid #00f2f1;
+}
+.monitor .tabs a.active {
+  color: #fff;
+}
+.monitor .content {
+  flex: 1;
+  position: relative;
+  display: none;
+}
+.monitor .head {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.05;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.15rem 0.45rem;
+  color: #68d8fe;
+  font-size: 0.175rem;
+}
+.monitor .marquee-view {
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.monitor .row {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.05;
+  font-size: 0.15rem;
+  color: #61a8ff;
+  padding: 0.15rem 0.45rem;
+}
+.monitor .row .icon-dot {
+  position: absolute;
+  left: 0.2rem;
+  opacity: 0;
+}
+.monitor .row:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #68d8fe;
+}
+.monitor .row:hover .icon-dot {
+  opacity: 1;
+}
+.monitor .col:first-child {
+  width: 1rem;
+}
+.monitor .col:nth-child(2) {
+  width: 2.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.monitor .col:nth-child(3) {
+  width: 1rem;
+}
